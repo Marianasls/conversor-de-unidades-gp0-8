@@ -145,8 +145,6 @@ int main () {
                      printf("Opcao invalida, tente novamente.\n");
                   }
         
-   }
-       
+   }  
     return 0;
-
 }
