@@ -3,7 +3,9 @@
 */
 
 #include <stdio.h>
-int opcao1, opcao2, opcao3, tarefa;
+int opcao1, opcao2, opcao3, tarefa, opcao;;
+float valor, resultado;
+
 
 int main () {
     //tela inicial
@@ -21,35 +23,45 @@ int main () {
     printf("9. Bits, bytes, kilobytes (KB), megabytes (MB), gigabytes (GB), terabytes (TB)\n");
     scanf("%d", &tarefa);
     printf("A opcao digita foi %d", tarefa);//linha de teste de retorno da opcão selecionada
-    if(tarefa <1 || tarefa > 9){
+   while(tarefa <1 || tarefa > 9){
         printf("Opcao invalida, digite novamente:\n");
-        scnaf("%d", &tarefa);
-    }
-
-    switch (opcao) {
-
-        case 1: printf("Escolha qual unidade deseja converter:\n");
-                    printf("1. Metro\n");
-                    printf("2. Centimetro\n");
-                    printf("3. Milimetro\n"); 
-                    scanf("%d", &formula);
-                    switch (formula) {
-                        case 1: formula ;
-                        break;
-                        case 2: printf("Você escolheu centimetro.\n");
-                        break;
-                        case 3: printf("Você escolheu milimetro.\n");
-                        break;
-                    }
-
-
-
-        break;
-        case 2: printf("O número é 2.\n"); 
-        break; 
+        scanf("%d", &tarefa);
+       }
+   switch (tarefa) {
+         case 1: printf("Escolha qual unidade deseja converter:\n");
+               printf("1. Metro\n");
+               printf("2. Centimetro\n");
+               printf("3. Milimetro\n"); 
+               scanf("%d", &opcao1);
+               printf("escolha para qual unidade sera convertida:\n");
+               scanf("%d", &opcao2); 
+               printf("Digite o valor a ser convertido:\n");
+               scanf("%f", &valor); 
+                  if(opcao1 == 1 && opcao2 == 2){
+                     resultado = valor * 100;
+                     printf("O valor convertido é: %f\n", resultado);
+                  } else if(opcao1 == 1 && opcao2 == 3){
+                     resultado = valor * 1000;
+                     printf("O valor convertido é: %f\n", resultado);
+                  } else if(opcao1 == 2 && opcao2 == 1){
+                     resultado = valor / 100;
+                     printf("O valor convertido é: %f\n", resultado);
+                  } else if(opcao1 == 2 && opcao2 == 3){
+                     resultado = valor * 10;
+                     printf("O valor convertido é: %f\n", resultado);
+                  } else if(opcao1 == 3 && opcao2 == 1){
+                     resultado = valor / 1000;
+                     printf("O valor convertido é: %f\n", resultado);
+                  } else if(opcao1 == 3 && opcao2 == 2){
+                     resultado = valor / 10;
+                     printf("O valor convertido e: %f\n", resultado);
+                  } else {
+                     printf("Opcao invalida, tente novamente.\n");
+                  }
+                  break;
         
-        }
-
+   }
+       
     return 0;
 
 }
