@@ -3,8 +3,7 @@
 */
 
 #include <stdio.h>
-
-int opcao;
+int opcao1, opcao2, opcao3, tarefa;
 
 int main () {
     //tela inicial
@@ -20,12 +19,36 @@ int main () {
     printf("7. Unidades de área (metro quadrado, centímetro quadrado)\n");
     printf("8. Unidades de tempo (segundos, minutos, horas\n");
     printf("9. Bits, bytes, kilobytes (KB), megabytes (MB), gigabytes (GB), terabytes (TB)\n");
-    scanf("%d", &opcao);
-    printf("A opcao digita foi %d", opcao);//linha de teste de retorno da opcão selecionada
-    if(opcao <1 || opcao > 9){
+    scanf("%d", &tarefa);
+    printf("A opcao digita foi %d", tarefa);//linha de teste de retorno da opcão selecionada
+    if(tarefa <1 || tarefa > 9){
         printf("Opcao invalida, digite novamente:\n");
-        scnaf("%d", &opcao);
+        scnaf("%d", &tarefa);
     }
+
+    switch (opcao) {
+
+        case 1: printf("Escolha qual unidade deseja converter:\n");
+                    printf("1. Metro\n");
+                    printf("2. Centimetro\n");
+                    printf("3. Milimetro\n"); 
+                    scanf("%d", &formula);
+                    switch (formula) {
+                        case 1: formula ;
+                        break;
+                        case 2: printf("Você escolheu centimetro.\n");
+                        break;
+                        case 3: printf("Você escolheu milimetro.\n");
+                        break;
+                    }
+
+
+
+        break;
+        case 2: printf("O número é 2.\n"); 
+        break; 
+        
+        }
 
     return 0;
 
