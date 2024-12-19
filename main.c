@@ -27,8 +27,8 @@ int main () {
         printf("Opcao invalida, digite novamente:\n");
         scanf("%d", &tarefa);
        }
-   switch (tarefa) {
-         case 1: printf("Escolha qual unidade deseja converter:\n");
+   switch (tarefa) {   //inicio do switch case
+         case 1: printf("Escolha qual unidade deseja converter:\n");    //inicio do case 1 Unidades de comprimento
                printf("1. Metro\n");
                printf("2. Centimetro\n");
                printf("3. Milimetro\n"); 
@@ -59,7 +59,7 @@ int main () {
                      printf("Opcao invalida, tente novamente.\n");
                   }
                   break;
-         case 2: printf("Escolha qual unidade deseja converter:\n");
+         case 2: printf("Escolha qual unidade deseja converter:\n");//inicio do case 2 unidades de massa
                printf("1. Quilograma\n");
                printf("2. Grama\n");
                printf("3. Tonelada\n");
@@ -90,7 +90,7 @@ int main () {
                      printf("Opcao invalida, tente novamente.\n");
                   }
                   break;
-         case 3: printf("Escolha qual unidade deseja converter:\n");
+         case 3: printf("Escolha qual unidade deseja converter:\n"); //inicio do case 3 unidades de volume
                   printf("1. Litro\n");  
                   printf("2. Mililitro\n");
                   printf("3. Metro cúbico\n");
