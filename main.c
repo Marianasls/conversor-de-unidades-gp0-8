@@ -22,6 +22,10 @@ int main () {
     printf("9. Bits, bytes, kilobytes (KB), megabytes (MB), gigabytes (GB), terabytes (TB)\n");
     scanf("%d", &opcao);
     printf("A opcao digita foi %d", opcao);//linha de teste de retorno da opcão selecionada
+    if(opcao <1 || opcao > 9){
+        printf("Opcao invalida, digite novamente:\n");
+        scnaf("%d", &opcao);
+    }
 
     return 0;
 
