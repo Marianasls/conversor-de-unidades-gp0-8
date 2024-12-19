@@ -90,6 +90,36 @@ int main () {
                      printf("Opcao invalida, tente novamente.\n");
                   }
                   break;
+         case 3: printf("Escolha qual unidade deseja converter:\n");
+                  printf("1. Litro\n");  
+                  printf("2. Mililitro\n");
+                  printf("3. Metro cúbico\n");
+                  scanf("%d", &opcao1);
+                  printf("escolha para qual unidade sera convertida:\n");
+                  scanf("%d", &opcao2);
+                  printf("Digite o valor a ser convertido:\n");
+                  scanf("%f", &valor);
+                  if(opcao1 == 1 && opcao2 == 2){
+                     resultado = valor * 1000;
+                     printf("O valor convertido é: %f\n", resultado);
+                  } else if(opcao1 == 1 && opcao2 == 3){
+                     resultado = valor / 1000;
+                     printf("O valor convertido é: %f\n", resultado);
+                  } else if(opcao1 == 2 && opcao2 == 1){
+                     resultado = valor / 1000;
+                     printf("O valor convertido é: %f\n", resultado);
+                  } else if(opcao1 == 2 && opcao2 == 3){
+                     resultado = valor / 1000000;
+                     printf("O valor convertido é: %f\n", resultado);
+                  } else if(opcao1 == 3 && opcao2 == 1){
+                     resultado = valor * 1000;
+                     printf("O valor convertido é: %f\n", resultado);
+                  } else if(opcao1 == 3 && opcao2 == 2){
+                     resultado = valor * 1000000;
+                     printf("O valor convertido e: %f\n", resultado);
+                  } else {
+                     printf("Opcao invalida, tente novamente.\n");
+                  }
         
    }
        
