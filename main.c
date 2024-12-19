@@ -1,11 +1,9 @@
 /***
  * Programa conversor de unidades.
 */
-
 #include <stdio.h>
 int opcao1, opcao2, opcao3, tarefa, opcao;;
 float valor, resultado;
-
 
 int main () {
     //tela inicial
