@@ -33,8 +33,16 @@ int main () {
                printf("2. Centimetro\n");
                printf("3. Milimetro\n"); 
                scanf("%d", &opcao1);
+                    while(opcao1 <1 || opcao1 > 3){ //validação da opção escolhida pelo usuário
+                        printf("Opcao invalida, digite novamente:\n");
+                        scanf("%d", &opcao1);
+                    }            
                printf("escolha para qual unidade sera convertida:\n");
-               scanf("%d", &opcao2); 
+               scanf("%d", &opcao2);    
+                    while(opcao2 <1 || opcao2 > 3 || opcao2 == opcao1){ //validação da opção escolhida pelo usuário e impedindo que a mesma opção seja escolhida
+                        printf("Opcao ja escolhida ou invalida, escolha outra opçao:\n");
+                        scanf("%d", &opcao2);
+                    }
                printf("Digite o valor a ser convertido:\n");
                scanf("%f", &valor); 
                   if(opcao1 == 1 && opcao2 == 2){
@@ -64,8 +72,16 @@ int main () {
                printf("2. Grama\n");
                printf("3. Tonelada\n");
                scanf("%d", &opcao1);
+                    while(opcao1 <1 || opcao1 > 3){ //validação da opção escolhida pelo usuário
+                        printf("Opcao invalida, digite novamente:\n");
+                        scanf("%d", &opcao1);
+                    }            
                printf("escolha para qual unidade sera convertida:\n");
-               scanf("%d", &opcao2); 
+               scanf("%d", &opcao2);    
+                    while(opcao2 <1 || opcao2 > 3 || opcao2 == opcao1){ //validação da opção escolhida pelo usuário e impedindo que a mesma opção seja escolhida
+                        printf("Opcao ja escolhida ou invalida, escolha outra opçao:\n");
+                        scanf("%d", &opcao2);
+                    } 
                printf("Digite o valor a ser convertido:\n");
                scanf("%f", &valor); 
                   if(opcao1 == 1 && opcao2 == 2){
@@ -95,8 +111,16 @@ int main () {
                   printf("2. Mililitro\n");
                   printf("3. Metro cúbico\n");
                   scanf("%d", &opcao1);
-                  printf("escolha para qual unidade sera convertida:\n");
-                  scanf("%d", &opcao2);
+                    while(opcao1 <1 || opcao1 > 3){ //validação da opção escolhida pelo usuário
+                        printf("Opcao invalida, digite novamente:\n");
+                        scanf("%d", &opcao1);
+                    }            
+               printf("escolha para qual unidade sera convertida:\n");
+               scanf("%d", &opcao2);    
+                    while(opcao2 <1 || opcao2 > 3 || opcao2 == opcao1){ //validação da opção escolhida pelo usuário e impedindo que a mesma opção seja escolhida
+                        printf("Opcao ja escolhida ou invalida, escolha outra opçao:\n");
+                        scanf("%d", &opcao2);
+                    }
                   printf("Digite o valor a ser convertido:\n");
                   scanf("%f", &valor);
                   if(opcao1 == 1 && opcao2 == 2){
