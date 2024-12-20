@@ -20,10 +20,9 @@ int main () {
     printf("8. Unidades de tempo (segundos, minutos, horas)\n");
     printf("9. Bits, bytes, kilobytes (KB), megabytes (MB), gigabytes (GB), terabytes (TB)\n");
     scanf("%d", &tarefa);
-    printf("A opcao digitada foi %d\n", tarefa); // linha de teste de retorno da opcão selecionada
     while(tarefa < 1 || tarefa > 9) {
-        printf("Opcao invalida, digite novamente:\n");
-        scanf("%d", &tarefa);
+      printf("Opcao invalida, digite novamente:\n");
+      scanf("%d", &tarefa);
     }
     switch (tarefa) {   //inicio do switch case
         case 1: 
