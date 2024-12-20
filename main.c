@@ -130,4 +130,46 @@ void conversao_massa(void){
             }
       }
 }
+void conversao_volume(void){
+      printf("CONVERSAO DE VOLUME\n\n");
+      printf("[1] LITRO --> MILILITRO\n[2] LITRO --> METRO CUBICO\n");
+      printf("[3] MILILITRO --> LITRO\n[4] MILILITRO --> METRO CUBICO\n");
+      printf("[5] METRO CUBICO --> LITRO\n[6] METRO CUBICO --> MILILITRO\n");
+      scanf("%d", &escolha);
+      while(escolha < 1 || escolha > 6){
+            printf("Opcao invalida, digite novamente:\n");
+            scanf("%d", &escolha);
+      }
+      if (escolha < 2){
+            printf("Digite o valor em litros:\n");
+            scanf("%f", &valor);
+            if(escolha == 1){
+                  resultado = valor * 1000;
+                  printf("O valor convertido é: %f\n", resultado);
+            } else if(escolha == 2){
+                  resultado = valor / 1000;
+                  printf("O valor convertido é: %f\n", resultado);
+            }
+      } else if(escolha < 4){
+            printf("Digite o valor em mililitros:\n");
+            scanf("%f", &valor);
+            if(escolha == 3){
+                  resultado = valor / 1000;
+                  printf("O valor convertido é: %f\n", resultado);
+            } else if(escolha == 4){
+                  resultado = valor / 1000000;
+                  printf("O valor convertido é: %f\n", resultado);
+            }
+      } else {
+            printf("Digite o valor em metros cubicos:\n");
+            scanf("%f", &valor);
+            if(escolha == 5){
+                  resultado = valor * 1000;
+                  printf("O valor convertido é: %f\n", resultado);
+            } else if(escolha == 6){
+                  resultado = valor * 1000000;
+                  printf("O valor convertido é: %f\n", resultado);
+            }
+      }
+}
 
