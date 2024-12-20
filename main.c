@@ -2,7 +2,12 @@
  * Programa conversor de unidades.
 */
 #include <stdio.h>
-int opcao1, opcao2,btarefa, opcao;
+
+void conversao_comprimento(void);
+void conversao_massa(void);
+void conversao_volume(void);
+
+int opcao1, opcao2, tarefa, opcao, escolha;
 float valor, resultado;
 
 int main () {
@@ -10,7 +15,7 @@ int main () {
    printf("Bem vindo ao Conversor de Unidade Embarcatech.\n");
    printf("\n");
    printf("digite o numero da opcao desejada:\n");
-   printf("1. Unidades de comprimento (metro, centímetro, milímetro)\n ") ;
+   printf("1. Unidades de comprimento (metro, centímetro, milímetro)\n") ;
    printf("2. Unidades de massa (quilograma, grama, tonelada\n");
    printf("3. Unidades de volume (litro, mililitro, metros cúbicos\n");
    printf("4. Unidades de temperatura (Celsius, Fahrenheit, Kelvin\n");
