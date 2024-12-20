@@ -2,11 +2,11 @@
  * Programa conversor de unidades.
 */
 #include <stdio.h>
-
+//adicionando funcoes
 void conversao_comprimento(void);
 void conversao_massa(void);
 void conversao_volume(void);
-
+//declarando variaveis
 int opcao1, opcao2, tarefa, opcao, escolha;
 float valor, resultado;
 
@@ -25,11 +25,13 @@ int main () {
    printf("8. Unidades de tempo (segundos, minutos, horas)\n");
    printf("9. Bits, bytes, kilobytes (KB), megabytes (MB), gigabytes (GB), terabytes (TB)\n");
    scanf("%d", &tarefa);
+   //validando opcao
    while(tarefa < 1 || tarefa > 9) {
    printf("Opcao invalida, digite novamente:\n");
       scanf("%d", &tarefa);
    }
-   switch (tarefa) {
+   //chamando funcoes
+   switch (tarefa) {  
       case 1: conversao_comprimento();
       break; 
       case 2: conversao_massa();
@@ -37,13 +39,14 @@ int main () {
       case 3: conversao_volume();
       break;
    }
-     
+    //perguntando se deseja realizar outra conversao 
    printf("Deseja realizar outra conversao? [1] SIM [2] NAO\n");
    scanf("%d", &opcao);
    while(opcao < 1 || opcao > 2){
          printf("Opcao invalida, digite novamente:\n");
          scanf("%d", &opcao);
    }
+   //validando opcao
    if(opcao == 1){
          main();
    } else {
@@ -51,16 +54,19 @@ int main () {
    }
    return 0;
 }
-void conversao_comprimento(void){
+//conversao de comprimento
+void conversao_comprimento(void){  
       printf("CONVERSAO DE COMPRIMETO\n\n");
       printf("[1] METROS --> CENTIMENTRO\n[2] METROS --> MILIMETROS\n");
       printf("[3] CENTIMETRO --> METROS\n[4] CENTIMETROS --> MILIMETROS\n");
       printf("[5] MILIMETROS --> METROS\n[6] MILIMETROS --> CENTIMETROS\n");
       scanf("%d", &escolha);
+      //validando opcao
       while(escolha < 1 || escolha > 6){
             printf("Opcao invalida, digite novamente:\n");
             scanf("%d", &escolha);
       }
+      //conversao
       if (escolha < 2){
             printf("Digite o valor em metros:\n");
             scanf("%f", &valor);
@@ -93,16 +99,19 @@ void conversao_comprimento(void){
             }
       }
 }
-void conversao_massa(void){
+//conversao de massa
+void conversao_massa(void){ 
       printf("CONVERSAO DE MASSA\n\n");
       printf("[1] QUILOGRAMA --> GRAMA\n[2] QUILOGRAMA --> TONELADA\n");
       printf("[3] GRAMA --> QUILOGRAMA\n[4] GRAMA --> TONELADA\n");
       printf("[5] TONELADA --> QUILOGRAMA\n[6] TONELADA --> GRAMA\n");
       scanf("%d", &escolha);
+      //validando opcao
       while(escolha < 1 || escolha > 6){
-            printf("Opcao invalida, digite novamente:\n");
+            printf("Opcao invalida, digite novamente:\n");  
             scanf("%d", &escolha);
       }
+      //conversao
       if (escolha < 2){
             printf("Digite o valor em quilogramas:\n");
             scanf("%f", &valor);
@@ -135,16 +144,19 @@ void conversao_massa(void){
             }
       }
 }
+//conversao de volume
 void conversao_volume(void){
       printf("CONVERSAO DE VOLUME\n\n");
       printf("[1] LITRO --> MILILITRO\n[2] LITRO --> METRO CUBICO\n");
       printf("[3] MILILITRO --> LITRO\n[4] MILILITRO --> METRO CUBICO\n");
       printf("[5] METRO CUBICO --> LITRO\n[6] METRO CUBICO --> MILILITRO\n");
       scanf("%d", &escolha);
+      //validando opcao
       while(escolha < 1 || escolha > 6){
             printf("Opcao invalida, digite novamente:\n");
             scanf("%d", &escolha);
       }
+      //conversao
       if (escolha < 2){
             printf("Digite o valor em litros:\n");
             scanf("%f", &valor);
