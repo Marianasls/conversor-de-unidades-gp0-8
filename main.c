@@ -7,50 +7,49 @@ void conversao_comprimento();
 void conversao_massa();
 void conversao_volume();
 //declarando variaveis
-int opcao1, opcao2, tarefa, opcao, escolha;
+int opcao1, opcao2, opcao, escolha;
 float valor, resultado = 0;
 
 int main () {
+    int tarefa;
     //tela inicial
-    printf("Bem vindo ao Conversor de Unidade Embarcatech.\n\n");
-    printf("digite o numero da opcao desejada:\n");
-    printf("1. Unidades de comprimento (metro, centímetro, milímetro)\n");
-    printf("2. Unidades de massa (quilograma, grama, tonelada\n");
-    printf("3. Unidades de volume (litro, mililitro, metros cúbicos\n");
-    printf("4. Unidades de temperatura (Celsius, Fahrenheit, Kelvin\n");
-    printf("5. Unidades de velocidade (km/h, m/s, mph)\n");
-    printf("6. Watts (W), quilowatts (kW), cavalos-vapor (cv ou hp)\n");
-    printf("7. Unidades de área (metro quadrado, centímetro quadrado)\n");
-    printf("8. Unidades de tempo (segundos, minutos, horas)\n");
-    printf("9. Bits, bytes, kilobytes (KB), megabytes (MB), gigabytes (GB), terabytes (TB)\n");
-    scanf("%d", &tarefa);
-    //validando opcao
-    while(tarefa < 1 || tarefa > 9) {
-    printf("Opcao invalida, digite novamente:\n");
+    do {
+        printf("Bem vindo ao Conversor de Unidade Embarcatech.\n\n");
+        printf("digite o numero da opcao desejada:\n");
+        printf("1. Unidades de comprimento (metro, centímetro, milímetro)\n");
+        printf("2. Unidades de massa (quilograma, grama, tonelada\n");
+        printf("3. Unidades de volume (litro, mililitro, metros cúbicos\n");
+        printf("4. Unidades de temperatura (Celsius, Fahrenheit, Kelvin\n");
+        printf("5. Unidades de velocidade (km/h, m/s, mph)\n");
+        printf("6. Watts (W), quilowatts (kW), cavalos-vapor (cv ou hp)\n");
+        printf("7. Unidades de área (metro quadrado, centímetro quadrado)\n");
+        printf("8. Unidades de tempo (segundos, minutos, horas)\n");
+        printf("9. Bits, bytes, kilobytes (KB), megabytes (MB), gigabytes (GB), terabytes (TB)\n");
         scanf("%d", &tarefa);
-    }
-    //chamando funcoes
-    switch (tarefa) {  
-        case 1: conversao_comprimento();
-        break; 
-        case 2: conversao_massa();
-        break; 
-        case 3: conversao_volume();
-        break;
-    }
-    //perguntando se deseja realizar outra conversao 
-    printf("Deseja realizar outra conversao? [1] SIM [2] NAO\n");
-    scanf("%d", &opcao);
-    while(opcao < 1 || opcao > 2){
-        printf("Opcao invalida, digite novamente:\n");
+
+        //validando opcao
+        while(tarefa < 1 || tarefa > 9) {
+            printf("Opcao invalida, digite novamente:\n");
+            scanf("%d", &tarefa);
+        }
+
+        //chamando funcoes
+        switch (tarefa) {  
+            case 1: conversao_comprimento();
+            break; 
+            case 2: conversao_massa();
+            break; 
+            case 3: conversao_volume();
+            break;
+        }
+
+        //perguntando se deseja realizar outra conversao 
+        printf("Deseja realizar outra conversao? [1] SIM [2] NAO\n");
         scanf("%d", &opcao);
-    }
-    //validando opcao
-    if(opcao == 1){
-        main();
-    } else {
-        printf("Obrigado por utilizar o Conversor de Unidade Embarcatech.\n");
-    }
+    } while(opcao == 1); 
+    
+    printf("Obrigado por utilizar o Conversor de Unidade Embarcatech.\n");
+
     return 0;
 }
 
