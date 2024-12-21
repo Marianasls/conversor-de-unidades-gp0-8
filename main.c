@@ -6,12 +6,9 @@
 void conversao_comprimento();
 void conversao_massa();
 void conversao_volume();
-//declarando variaveis
-int opcao1, opcao2, opcao, escolha;
-float valor, resultado = 0;
 
 int main () {
-    int tarefa;
+    int tarefa, opcao;
     //tela inicial
     do {
         printf("Bem vindo ao Conversor de Unidade Embarcatech.\n\n");
@@ -47,7 +44,7 @@ int main () {
         printf("Deseja realizar outra conversao? [1] SIM [2] NAO\n");
         scanf("%d", &opcao);
     } while(opcao == 1); 
-    
+
     printf("Obrigado por utilizar o Conversor de Unidade Embarcatech.\n");
 
     return 0;
@@ -55,6 +52,9 @@ int main () {
 
 //conversao de comprimento
 void conversao_comprimento(){  
+    int escolha;
+    float valor, resultado = 0;
+
     printf("CONVERSAO DE COMPRIMETO\n\n");
     printf("[1] METROS --> CENTIMENTRO\n[2] METROS --> MILIMETROS\n");
     printf("[3] CENTIMETRO --> METROS\n[4] CENTIMETROS --> MILIMETROS\n");
@@ -100,6 +100,9 @@ void conversao_comprimento(){
 }
 //conversao de massa
 void conversao_massa(){ 
+    int escolha;
+    float valor, resultado = 0;
+
     printf("CONVERSAO DE MASSA\n\n");
     printf("[1] QUILOGRAMA --> GRAMA\n[2] QUILOGRAMA --> TONELADA\n");
     printf("[3] GRAMA --> QUILOGRAMA\n[4] GRAMA --> TONELADA\n");
@@ -145,6 +148,9 @@ void conversao_massa(){
 }
 //conversao de volume
 void conversao_volume(void){
+    int escolha;
+    float valor, resultado = 0;
+
     printf("CONVERSAO DE VOLUME\n\n");
     printf("[1] LITRO --> MILILITRO\n[2] LITRO --> METRO CUBICO\n");
     printf("[3] MILILITRO --> LITRO\n[4] MILILITRO --> METRO CUBICO\n");
