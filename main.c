@@ -3,7 +3,6 @@
 */
 #include <stdio.h>
 
-
 // declaracao das funcoes de conversao de unidades
 void conversao_comprimento();
 void conversao_massa();
@@ -11,6 +10,7 @@ void conversao_volume();
 void conversao_temperatura();
 void conversao_velocidade();
 void conversao_potencia();
+void conversao_tempo();
 
 // funcoes para conversao de temperatura
 float celsius_to_fahrenheit(float c) {
@@ -35,6 +35,14 @@ float kelvin_to_celsius(float k) {
 
 float kelvin_to_fahrenheit(float k) {
     return celsius_to_fahrenheit(kelvin_to_celsius(k));
+}
+
+void convert_seconds(int total_seconds, int *days, int *hours, int *minutes, int *seconds) {
+    // Calcula dias, horas, minutos e segundos restantes
+    *days = total_seconds / 86400;         // Um dia tem 86400 segundos
+    *hours = (total_seconds % 86400) / 3600;  // Uma hora tem 3600 segundos
+    *minutes = (total_seconds % 3600) / 60;  // Um minuto tem 60 segundos
+    *seconds = total_seconds % 60;           // Segundos restantes
 }
 
 int main() {
@@ -80,6 +88,9 @@ int main() {
             case 6:
                 conversao_potencia();
                 break;
+            case 8:
+                conversao_tempo();
+                break;
         }
 
         //perguntando se deseja realizar outra conversao 
@@ -90,6 +101,24 @@ int main() {
     printf("Obrigado por utilizar o Conversor de Unidade Embarcatech.\n");
 
     return 0;
+}
+
+void conversao_tempo() {
+    int total_seconds; // Variável para entrada do usuário
+    int days, hours, minutes, seconds;
+
+    // Solicita entrada do usuário
+    printf("Digite o total de segundos: ");
+    if (scanf("%d", &total_seconds) != 1 || total_seconds < 0) {
+        printf("Erro: Por favor, insira um número inteiro positivo.\n");
+        return;
+    }
+
+    // Realiza a conversão
+    convert_seconds(total_seconds, &days, &hours, &minutes, &seconds);
+
+    // Exibe o resultado
+    printf("Resultado: %d dias, %d horas, %d minutos, %d segundos\n", days, hours, minutes, seconds);
 }
 
 void conversao_velocidade() {
