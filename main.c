@@ -11,6 +11,7 @@ void conversao_temperatura();
 void conversao_velocidade();
 void conversao_potencia();
 void conversao_tempo();
+void conversao_area();
 
 // funcoes para conversao de temperatura
 float celsius_to_fahrenheit(float c)
@@ -92,6 +93,9 @@ int main()
             break;
         case 8:
             conversao_tempo();
+            break;
+        case 7:
+            conversao_area();
             break;
         }
 
@@ -559,6 +563,73 @@ void conversao_tempo()
     case 6: // Horas para Minutos
         resultado = valor * 60;
         printf("O valor convertido é: %.2f minutos\n", resultado);
+        break;
+    default:
+        printf("Opcao invalida.\n");
+    }
+}
+
+// conversor de area
+void conversao_area()
+{
+    int escolha;
+    float valor, resultado;
+
+    printf("CONVERSAO DE AREA\n\n");
+    printf("[1] METROS QUADRADOS --> CENTIMETROS QUADRADOS\n");
+    printf("[2] METROS QUADRADOS --> MILIMETROS QUADRADOS\n");
+    printf("[3] METROS QUADRADOS --> HECTARES\n");
+    printf("[4] METROS QUADRADOS --> KILOMETROS QUADRADOS\n");
+    printf("[5] CENTIMETROS QUADRADOS --> METROS QUADRADOS\n");
+    printf("[6] MILIMETROS QUADRADOS --> METROS QUADRADOS\n");
+    printf("[7] HECTARES --> METROS QUADRADOS\n");
+    printf("[8] KILOMETROS QUADRADOS --> METROS QUADRADOS\n");
+    scanf("%d", &escolha);
+
+    // Validando a opção
+    while (escolha < 1 || escolha > 8)
+    {
+        printf("Opcao invalida, digite novamente:\n");
+        scanf("%d", &escolha);
+    }
+
+    printf("Digite o valor a ser convertido:\n");
+    scanf("%f", &valor);
+
+    // Conversão com base na escolha
+    switch (escolha)
+    {
+    case 1:
+        resultado = valor * 10000; // m² -> cm²
+        printf("O valor convertido é: %.2f cm²\n", resultado);
+        break;
+    case 2:
+        resultado = valor * 1000000; // m² -> mm²
+        printf("O valor convertido é: %.2f mm²\n", resultado);
+        break;
+    case 3:
+        resultado = valor / 10000; // m² -> hectares
+        printf("O valor convertido é: %.2f hectares\n", resultado);
+        break;
+    case 4:
+        resultado = valor / 1000000; // m² -> km²
+        printf("O valor convertido é: %.6f km²\n", resultado);
+        break;
+    case 5:
+        resultado = valor / 10000; // cm² -> m²
+        printf("O valor convertido é: %.2f m²\n", resultado);
+        break;
+    case 6:
+        resultado = valor / 1000000; // mm² -> m²
+        printf("O valor convertido é: %.2f m²\n", resultado);
+        break;
+    case 7:
+        resultado = valor * 10000; // hectares -> m²
+        printf("O valor convertido é: %.2f m²\n", resultado);
+        break;
+    case 8:
+        resultado = valor * 1000000; // km² -> m²
+        printf("O valor convertido é: %.2f m²\n", resultado);
         break;
     default:
         printf("Opcao invalida.\n");
