@@ -8,11 +8,11 @@ void conversao_dados(int escolha){
     printf("Digite o valor: ");
     if (scanf("%lf", &value) != 1 || value < 0) {
         printf("Valor inválido! Por favor, insira um número positivo.\n");
-        return 1;
+        return;
     }
 
     // Determina o fator de conversão
-    int unit;
+    long int unit;
     switch (escolha) {
         
         case 1: unit = 1.0 / 8.0; break;          // 1 bit = 1/8 bytes
@@ -20,7 +20,7 @@ void conversao_dados(int escolha){
         case 3: unit = 1024; break;               // 1 KB = 1024 bytes
         case 4: unit = 1024 * 1024; break;        // 1 MB = 1024^2 bytes
         case 5: unit = 1024 * 1024 * 1024; break; // 1 GB = 1024^3 bytes
-        case 6: unit = 1024 * 1024 * 1024 * 1024; break; // 1 TB
+        case 6: unit = 1024 * 1024 * 1024 * (long int)1024; break; // 1 TB
     }
 
     double bytes = value * unit;
