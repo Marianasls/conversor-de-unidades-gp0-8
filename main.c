@@ -135,6 +135,18 @@ int main()
             break;
         case 9:
             printf("CONVERSAO DE MEDIDAS DE DADOS\n\n");
+            printf("Escolha a unidade de entrada:\n");
+            printf("1. Bits\n");
+            printf("2. Bytes\n");
+            printf("3. Kilobytes (KB)\n");
+            printf("4. Megabytes (MB)\n");
+            printf("5. Gigabytes (GB)\n");
+            printf("6. Terabytes (TB)\n");
+            printf("Digite sua escolha (1-6): ");
+            scanf("%d", &escolha);
+            valida_escolha(escolha, 6);
+            conversao_dados(escolha);
+            break;
         case 10:
             printf("CONVERSAO DE ENERGIA\n\n");
             printf("[1] Joules (J) --> Quilojoules (kJ)\n");
